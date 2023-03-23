@@ -8,7 +8,7 @@ module this {
 }
 
 resource "aws_s3_bucket_object" "object" {
-  count = length(var.bucket.objects)
+  count = length(var.bucket_objects)
 
   bucket = module.this.this_bucket_s3_id
   key = var.bucket_objects[count.index]

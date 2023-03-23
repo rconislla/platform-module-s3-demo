@@ -23,3 +23,9 @@ variable "bucket_objects" {
   type = list(string)
   default = []
 }
+
+variable "versioning" {
+  description = "optional"
+  type = map(string)
+  default = {}
+}
