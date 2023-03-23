@@ -7,7 +7,7 @@ module this {
   tags = var.tags
 }
 
-resource "aws_s3_bucket_object" "bucket_object" {
+resource "aws_s3_bucket_object" "object" {
   count = length(var.bucket.objects)
 
   bucket = module.this.this_bucket_s3_id
