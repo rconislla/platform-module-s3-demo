@@ -4,12 +4,13 @@ module this {
 
   bucket = var.bucket
   acl = var.acl
+  versioning =  var.versioning
   tags = var.tags
 }
 
 resource "aws_s3_bucket_object" "object" {
   count = length(var.bucket_objects)
 
-  bucket = module.this.this_bucket_s3_id
+  bucket = module.this.s3_bucket_id
   key = var.bucket_objects[count.index]
 }
