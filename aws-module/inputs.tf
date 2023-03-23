@@ -7,7 +7,7 @@ variable "bucket" {
 
 
 variable "acl" {
-  descriptipn = "Optional"
+  description = "Optional"
   type = string
   default = "private"
 }
